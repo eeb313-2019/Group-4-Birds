@@ -31,7 +31,7 @@
 
 - How it will answer your research questions?
 
-- Include a reference of the dataset if one is available, for instance:
+- Reference:
 
   BC shorebirds abundance at Roberts bank, also a migratory bird:
   http://data.ec.gc.ca/data/species/protectrestore/roberts-bank-shorebird-surveys-british-columbia/
