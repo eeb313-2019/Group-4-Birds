@@ -7,11 +7,15 @@
 
 - What is your project about?
 
+  Owing to the evident climate change, migratory birds are experiencing a rapid decline in their abundances. Studies on effects of climate change on Ontario migratory bird has been done and well analyzed, and we are wondering if species in the western coast show the similar trends.
+
 - What is the goal? 
+
+   We are to plot out some migratory bird species abundance data and compare differences in migration dates on a 20-years interval to figure out the potential threats to give insights for future conservation efforts.
 
 - Why are you doing it?
 
-  All of our group members are specifically interested in bird species and conservation. We understand the current anthropogenic environmental crisis and we are curious about how climate change will affect migratory birds, especially their migration dates. We are to plot out the bird migration data to figure out their potential threats to give insights for future conservation efforts.
+  All of our group members are specifically interested in bird species and conservation. We understand the current anthropogenic environmental crisis and we are curious about how climate change will affect migratory birds, especially their population abundances and migration dates. 
   
   
 
