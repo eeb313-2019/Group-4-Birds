@@ -10,9 +10,9 @@
 - What is the goal? 
 
 - Why are you doing it?
-
-
-
+  All of our group members are specifically interested in birds and bird conservation. 
+  
+  
 
 # Description of the data
 
@@ -21,6 +21,8 @@
 - What are the variables to be used? 
 
 - How was data collected? 
+
+  Our data was obtained from the North American Breeding Bird Survey (BBS) web site. According to the BBS Overview Article, the data was collected by very motivated birders, who all have fair experience on bird identification to assist in monitering and discoverying bird population trend on various surveyed route.
 
 - How it will answer your research questions?
 
