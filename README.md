@@ -52,6 +52,8 @@
   Phenology of two interdependent traits in migratory birds in response to climate change:
   https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4424651/?tool=pmcentrez&report=abstract
   
+  Populations of migratory bird species that did not show a phenological response to climate change are declining
+  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2571031/?tool=pmcentrez&report=abstract
   
   
 # Team description
