@@ -48,6 +48,12 @@
   Climate change and population declines in a long-distance migratory bird:
   https://go-gale-com.myaccess.library.utoronto.ca/ps/i.do?p=CPI&u=utoronto_main&id=GALE|A185452228&v=2.1&it=r&sid=summon
   (The references in this paper may also be helpful.)
+  
+  Phenology of two interdependent traits in migratory birds in response to climate change:
+  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4424651/?tool=pmcentrez&report=abstract
+  
+  
+  
 # Team description
 
 - Brief biography of each member (what are their skills and approximate responsibilities)
