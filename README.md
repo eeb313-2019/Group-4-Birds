@@ -39,7 +39,7 @@
 
 - Brief biography of each member (what are their skills and approximate responsibilities)
   
-  Xueqian Ma: 
+  Xueqian Ma: a fourth-year EEB specialist. Passionate about animal diversity and animal behavior. Comfortable with statistics and programming. Will assist in data manipulation, plotting and statistics analysis.
   
   Yani Fang: a fourth-year undergraduate student majoring in biodiversity & conservation, minoring in environmental biology and environmental studies. Easy-going, can solve disputes among group members, have basic understanding on evolution and human-induced effects on biodiversity, and know a little bit programming. May help with plotting and buiding models.
   
