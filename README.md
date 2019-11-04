@@ -11,7 +11,7 @@
 
 - Why are you doing it?
 
-  All of our group members are specifically interested in birds and bird conservation. We want to plot out the bird data to figure out their current population status to give insights for future conservation efforts.
+  All of our group members are specifically interested in bird species and conservation. We understand the current anthropogenic environmental crisis and we are curious about how climate change will affect migratory birds, especially their migration dates. We are to plot out the bird migration data to figure out their potential threats to give insights for future conservation efforts.
   
   
 
@@ -39,11 +39,11 @@
 
 - Brief biography of each member (what are their skills and approximate responsibilities)
   
-  Xueqian Ma: a fourth-year EEB specialist. Passionate about animal diversity and animal behavior. Comfortable with statistics and programming. Will assist in data manipulation, plotting and statistics analysis.
+  Xueqian Ma: a fourth-year EEB specialist. Passionate about animal diversity and animal behavior. Comfortable with statistics and programming. Will assist in data manipulation, plotting and statistical analysis.
   
   Yani Fang: a fourth-year undergraduate student majoring in biodiversity & conservation, minoring in environmental biology and environmental studies. Easy-going, can solve disputes among group members, have basic understanding on evolution and human-induced effects on biodiversity, and know a little bit programming. May help with plotting and buiding models.
   
-  Xinji Zhao:a fourth-year undergraduate student majoring in biodiversity & conservation biology, minoring in statistics. I'm able to analyze the data and graph based on my statistic knowledge, prefer jobs after coding.
+  Xinji Zhao: a fourth-year undergraduate student majoring in biodiversity & conservation biology, minoring in statistics. I'm able to analyze the data and graph based on my statistic knowledge, prefer jobs after coding.
 
 - How will team roles be rotated?
 
