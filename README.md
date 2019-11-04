@@ -52,7 +52,7 @@
   
   Xueqian Ma: a fourth-year EEB specialist. Passionate about animal diversity and animal behavior. Comfortable with statistics and programming. Will assist in data manipulation, plotting and statistical analysis.
   
-  Yani Fang: a fourth-year undergraduate student majoring in biodiversity & conservation, minoring in environmental biology and environmental studies. Easy-going, can solve disputes among group members, have basic understanding on evolution and human-induced effects on biodiversity, and know a little bit programming. May help with plotting and buiding models.
+  Yani Fang: a fourth-year undergraduate student majoring in biodiversity & conservation, minoring in environmental biology and environmental studies. Easy-going, can solve disputes among group members, have basic understanding on evolution and human-induced effects on biodiversity, and know a little bit programming. May help with plotting and building models.
   
   Xinji Zhao: a fourth-year undergraduate student majoring in biodiversity & conservation biology, minoring in statistics. I'm able to analyze the data and graph based on my statistic knowledge, prefer jobs after coding.
 
