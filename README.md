@@ -38,6 +38,12 @@
   
   Climate change effects on Western & Eastern American migratory birds 
   https://www.cbc.ca/news/technology/climate-change-migratory-birds-1.4115573
+  
+  Decline of the North American avifauna:
+  https://science.sciencemag.org/content/366/6461/120
+  
+  The State of North America’s Birds (can change 'year' in URL):
+  https://www.stateofthebirds.org/2016/
  
 
 # Team description
@@ -53,13 +59,3 @@
 - How will team roles be rotated?
 
   We will have Xueqian Ma to be our leader for the first two weeks to help us get a fresh start and brainstorm with relavent ideas. Yani Fang will be our team leader for the third week, monitering the process of data analysi. Xinji Zhao will be our team leader for the final week, whose responsibility is mainly on the organization of our results and preparation of the PPT presentation. We prefer that Yani will be our Recorder and Xinji as our Organiser for now, later changes can be applied if that is better.
-  
-# Reference
-
-  https://science.sciencemag.org/content/366/6461/120
-  https://www.birdscanada.org/news/the-state-of-north-americas-birds
-  
-
-
-
-
