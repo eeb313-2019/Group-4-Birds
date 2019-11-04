@@ -45,7 +45,9 @@
   The State of North America’s Birds (can change 'year' in URL):
   https://www.stateofthebirds.org/2016/
  
-
+  Climate change and population declines in a long-distance migratory bird:
+  https://go-gale-com.myaccess.library.utoronto.ca/ps/i.do?p=CPI&u=utoronto_main&id=GALE|A185452228&v=2.1&it=r&sid=summon
+  (The references in this paper may also be helpful.)
 # Team description
 
 - Brief biography of each member (what are their skills and approximate responsibilities)
