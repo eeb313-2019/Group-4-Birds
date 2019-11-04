@@ -11,7 +11,7 @@
 
 - Why are you doing it?
 
-  All of our group members are specifically interested in birds and bird conservation. 
+  All of our group members are specifically interested in birds and bird conservation. We want to plot out the bird data to figure out their current population status to give insights for future conservation efforts.
   
   
 
@@ -38,8 +38,16 @@
 # Team description
 
 - Brief biography of each member (what are their skills and approximate responsibilities)
+  
+  Xueqian Ma: 
+  
+  Yani Fang: a fourth-year undergraduate student majoring in biodiversity & conservation, minoring in environmental biology and environmental studies. Easy-going, can solve disputes among group members, have basic understanding on evolution and human-induced effects on biodiversity, and know a little bit programming.
+  
+  Xinji Zhao:
 
 - How will team roles be rotated?
+
+  We will have Xueqian Ma to be our lader for the first two weeks to help us get a fresh start and brainstorm with ideas. Yani Fang will be our team leader for the third week on data analysis. Xinji Zhao will be our team leader for the final week, whose responsibility is mainly on the organization of our results and preparation of PPT the presentation. We prefer that Yani will be our Recorder and Xinji as our Organiser for now, later changes can be applied if that is better.
 
 
 
