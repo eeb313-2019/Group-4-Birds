@@ -3,30 +3,14 @@
 
 # Introduction to the project
 
-  Owing to the evident global climate change, migratory birds are experiencing a rapid decline in their abundances. In addition, a change in local climatic conditions (such as temperature and precipitation) may predict a shift in migration dates. Studies on effects of climate change on Ontario migratory birds have been done and well analyzed, and we are wondering if Western Sandpipper, a migratory species which passes through coastal British Columbia as a stopover site, show the similar trends. We are to plot out the abundance data of Western Sandpipper against the stopover sites' local temperature and precipitation and compare differences in migration dates on a 18-year interval to figure out the potential threats to give insights for future conservation efforts. All of our group members are specifically interested in bird diversity and conservation. We understand the current anthropogenic environmental crisis and we are curious about how climate change will affect migratory birds, especially their population abundances and migration dates. 
+  Owing to the evident global climate change, migratory birds are experiencing a rapid decline in their abundances. Besides, a change in local climatic conditions (such as temperature and precipitation) may predict a shift in migration dates. Studies on effects of climate change on Ontario migratory birds have been done and well analyzed, and we are wondering if Western Sandpiper, a migratory species which passes through coastal British Columbia as a stopover site, shows similar trends. We are to plot out the abundance data of Western Sandpiper against the stopover sites' local temperature and precipitation and compare differences in migration dates on an 18-year interval to figure out the potential threats to give insights for future conservation efforts. All of our group members are specifically interested in bird diversity and conservation. We understand the current anthropogenic environmental crisis and we are curious about how climate change will affect migratory birds, especially their population abundances and migration dates. 
   
   
 
 # Description of the data
 
-- What is the data about?
-
-  We have datasets for daily temperature and precipitations in Delta Tsawwassen Beach, BC for years from 1997-2015. We also have Western Sandpipper abundance data during April to May (which is their migration period) ranging from the same 18-year interval.
-
-- What are the variables to be used? 
-
-  The response variable is the daily abundance of Western Sandpipper in costal BC from April to May, 1997-2015. 
-  The predictor variables may include daily temperature and precipitation from April to May, 1997-2015. We are also concerned about dates and year of the migration.
-
-- How was data collected? 
-
-  Our historical climate data was obtained from Daily Data Report produced by Department Environment and Natural Resources, Government of Canada. The government employs specialized scientists to record the hourly climatological data at observing stations, using insytuments such as satellites and weather balloons and others. We searched up the given coordinates where bird data was collected, and then selected the proximate location with sufficient climate data available (having data for the targeted 19-year interval). 
-  Besides, the Western Sandpipper abundance data was gathered from the Roberts Bank Shorebird Survey conducted in BC by Environment and Climate Change, Government of Canada. The researchers surveyed species-specific abundance of two shorebird species, Western Sandpiper (*Calidris mauri*) and Dunlin (*Calidris alpina*) during their migration period (April-May) from 1991 to 2015 at Roberts Bank's mudflat by counting. 
-
-
-- How it will answer your research questions?
-  
-  By exploring the mentioned datasets above, we can have some insights about the relationship between *maybe* climate change and *potential shifts* of Western Sandpipper migration dates and *potential change* in the bird abundance.
+  We have datasets for daily temperature and precipitations in Delta Tsawwassen Beach, BC for years from 1997-2015. We also have Western Sandpiper abundance data from April to May (which is their migration period) ranging from the same 18-year interval. The response variable is the daily abundance of Western Sandpiper in costal BC from April to May 1997-2015. The predictor variables may include daily temperature and precipitation from April to May 1997-2015. We are also concerned about the dates and years of the migration.
+  Our historical climate data were obtained from the Daily Data Report produced by Department Environment and Natural Resources, Government of Canada. The government employs specialized scientists to record the hourly climatological data at observing stations, using instruments such as satellites and weather balloons and others. We searched up the given coordinates where bird data was collected, and then selected the proximate location with sufficient climate data available (having data for the targeted 19-year interval). Besides, the Western Sandpiper abundance data was gathered from the Roberts Bank Shorebird Survey conducted in BC by Environment and Climate Change, Government of Canada. The researchers surveyed species-specific abundance of two shorebird species, Western Sandpiper (*Calidris mauri*) and Dunlin (*Calidris alpina*) during their migration period (April-May) from 1991 to 2015 at Roberts Bank's mudflat by counting. By exploring the mentioned datasets above, we can have some insights about the relationship between *maybe* climate change and *potential shifts* of Western Sandpiper migration dates and *potential change* in the bird abundance.
 
 - Reference:
 
@@ -58,14 +42,10 @@
   
 # Team description
 
-- Brief biography of each member (what are their skills and approximate responsibilities)
+  Xueqian Ma: a fourth-year EEB specialist. Passionate about animal diversity and animal behavior. Comfortable with statistics and programming. Will assist in data manipulation, plotting, and statistical analysis.
   
-  Xueqian Ma: a fourth-year EEB specialist. Passionate about animal diversity and animal behavior. Comfortable with statistics and programming. Will assist in data manipulation, plotting and statistical analysis.
-  
-  Yani Fang: a fourth-year undergraduate student majoring in biodiversity & conservation, minoring in environmental biology and environmental studies. Easy-going, can solve disputes among group members, have basic understanding on evolution and human-induced effects on biodiversity, and know a little bit programming. May help with plotting and building models.
+  Yani Fang: a fourth-year undergraduate student majoring in biodiversity & conservation, minoring in environmental biology and environmental studies. Easy-going, can solve disputes among group members, have a basic understanding of evolution and human-induced effects on biodiversity, and know a little bit of programming. May help with plotting and building models.
   
   Xinji Zhao: a fourth-year undergraduate student majoring in biodiversity & conservation biology, minoring in statistics. I'm able to analyze the data and graph based on my statistic knowledge, prefer jobs after coding.
-
-- How will team roles be rotated?
-
-  We will have Xueqian Ma to be our leader for the first two weeks to help us get a fresh start and brainstorm with relavent ideas. Yani Fang will be our team leader for the third week, monitering the process of data analysi. Xinji Zhao will be our team leader for the final week, whose responsibility is mainly on the organization of our results and preparation of the PPT presentation. We prefer that Yani will be our Recorder and Xinji as our Organiser for now, later changes can be applied if that is better.
+  
+  We will have Xueqian Ma to be our leader for the first two weeks to help us get a fresh start and brainstorm with relevant ideas. Yani Fang will be our team leader for the third week, monitoring the process of data analysis. Xinji Zhao will be our team leader for the final week, whose responsibility is mainly on the organization of our results and preparation of the PPT presentation. We prefer that Yani will be our Recorder and Xinji as our Organiser, for now, later changes can be applied if that is better.
