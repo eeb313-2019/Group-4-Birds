@@ -16,31 +16,12 @@
 
 - Reference:
 
-  BC shorebirds abundance at Roberts bank, also a migratory bird:
-  http://data.ec.gc.ca/data/species/protectrestore/roberts-bank-shorebird-surveys-british-columbia/
+  Government of Canada. (2018) Data from: Roberts Bank Shorebird Surveys, British Columbia - Predicted and Actual Counts, 1991-2015. (http://data.ec.gc.ca/data/species/protectrestore/roberts-bank-shorebird-surveys-british-columbia/)
   
-  Climate change effects on Western & Eastern American migratory birds 
-  https://www.cbc.ca/news/technology/climate-change-migratory-birds-1.4115573
+  Government of Canada. (2019) Data from: Daily climate report (https://climate.weather.gc.ca/climate_data/daily_data_e.html?hlyRange=%7C&dlyRange=1971-03-01%7C2019-11-10&mlyRange=1971-01-01%7C2007-02-01&StationID=766&Prov=BC&urlExtension=_e.html&searchType=stnProx&optLimit=yearRange&StartYear=1998&EndYear=2015&selRowPerPage=100&Line=1&txtRadius=25&optProxType=custom&selCity=&selPark=&txtCentralLatDeg=49&txtCentralLatMin=03&txtCentralLatSec=0&txtCentralLongDeg=123&txtCentralLongMin=09&txtCentralLongSec=0&timeframe=2&Day=11&Year=1999&Month=4#)
   
-  Decline of the North American avifauna:
-  https://science.sciencemag.org/content/366/6461/120
-  
-  The State of North America’s Birds (can change 'year' in URL):
-  https://www.stateofthebirds.org/2016/
- 
-  Climate change and population declines in a long-distance migratory bird:
-  https://go-gale-com.myaccess.library.utoronto.ca/ps/i.do?p=CPI&u=utoronto_main&id=GALE|A185452228&v=2.1&it=r&sid=summon
-  (The references in this paper may also be helpful.)
-  
-  Phenology of two interdependent traits in migratory birds in response to climate change:
-  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4424651/?tool=pmcentrez&report=abstract
-  
-  Populations of migratory bird species that did not show a phenological response to climate change are declining
-  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2571031/?tool=pmcentrez&report=abstract
-  
-  Daily climate report
-  https://climate.weather.gc.ca/climate_data/daily_data_e.html?hlyRange=%7C&dlyRange=1971-03-01%7C2019-11-10&mlyRange=1971-01-01%7C2007-02-01&StationID=766&Prov=BC&urlExtension=_e.html&searchType=stnProx&optLimit=yearRange&StartYear=1998&EndYear=2015&selRowPerPage=100&Line=1&txtRadius=25&optProxType=custom&selCity=&selPark=&txtCentralLatDeg=49&txtCentralLatMin=03&txtCentralLatSec=0&txtCentralLongDeg=123&txtCentralLongMin=09&txtCentralLongSec=0&timeframe=2&Day=11&Year=1999&Month=4#
-  
+  Note: we only list one climate dataset above, while we actually have 24, with one for each year.
+
   
 # Team description
 
