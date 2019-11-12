@@ -9,7 +9,9 @@
 # Description of the data
 
   We obtained the Western Sandpiper abundance data from the Roberts Bank Shorebird Survey conducted in BC by Environment and Climate Change, Government of Canada. The researchers surveyed species-specific abundance of two shorebird species, Western Sandpiper (*Calidris mauri*) and Dunlin (*Calidris alpina*) during their migration period (April-May) from 1991 to 2015 at Roberts Bank's mudflat. The daily counts started from April 15 each year till bird abundance <1000 or May 15, whichever came first.  
+  
   We also selected datasets for daily temperature and precipitations in Delta Tsawwassen Beach, BC for years from 1991-2015. These historical climate datasets were obtained from the Daily Data Report produced by Department of Environment and Natural Resources, Government of Canada. Specialized scientists recorded the hourly climatological data at observing stations, using instruments such as satellites and weather balloons and others. The Delta Tsawwassen Beach was the closest site to the given coordinates where the actual bird abundance survey was conducted, and this site contained sufficient climate data (i.e. having data for the targeted time intervals).  
+  
   Our response variable will be the daily abundance of Western Sandpiper in costal BC from April to May, 1991-2015 and our predictor variables may include daily temperature and precipitation from April to May 1991-2015. By exploring the relationship between these variables, we can gain some insights about the impacts of climate change on *potential change* in the Western Sandpiper abundance and *potential shifts* of their migration dates.
 
 - Reference:
