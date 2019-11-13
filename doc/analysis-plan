@@ -1,8 +1,17 @@
 # Possible analyses
 
-- To investigate whether the population abundance changes over the years, we calculate the mean daily counts of Western Sandpiper 
-  during the migration period for 24 years. We then do a regression test between year and mean daily counts.
-  Data manipulation: 
+Possible data manipulations before analysis:
+
+- For the climate data, we select the daily mean temperature and precipitation columns from each report from 1991 to 2015,
+and combine them into a single dataset.
+- For the abundance data, we select daily counts of Western Sandpiper during the migration period from 1991 to 2015 and 
+remove NAs. 
+
+Possible statistical analysis:
+
+- To investigate whether the population abundance changes over the years, we calculate the mean daily counts of
+Western Sandpiper during the migration period for 24 years. We then do a regression test between year and mean daily counts.
+- 
 
 
 - Does the population abundance trend vary each year?
