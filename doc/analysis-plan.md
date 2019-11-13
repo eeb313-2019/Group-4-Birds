@@ -13,12 +13,11 @@ Possible statistical analysis:
 - To investigate whether the population abundance changes over the years, we calculate the mean daily counts of
 Western Sandpiper during the migration period for 24 years. We then do a regression test between year and mean daily counts.
 - To investigate whether temperature and precipitation differ through years, we use two one-way ANOVA tests.  
+- A correlation test between daily temperature and precipitation.
+- A multiple linear regression test: daily Western Sandpiper observation counts ~ daily local temperature * daily local precipitation 
 
 
-- How do temperature and precipitation change? 
-- Is temperature and precipitation correlated at the study site?
-- Which day does population abundance peak for each year?
-- How does the peak vary over the years? 
+
 - Does the daily local temperature and precipitation predict daily Western Sandpiper observation counts?
 
 
@@ -40,3 +39,5 @@ Over the years, during the migration period (15 April - 15 May):
 
 A plot of the population abundance over 24 years: mean daily counts vs. year.
 A plot of population trend each year: daily counts vs date.
+A plot of the temperature and precipitation over 24 years: mean temperature and precipitation during migration period vs. year.
+A plot of the peak dates vs. years.
