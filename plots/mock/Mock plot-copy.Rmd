@@ -1,0 +1,32 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+A plot of the population abundance over 24 years: mean daily counts vs. year.
+
+```{r}
+set.seed(44)
+abun <- c(26:3, -1)
+ab_ran <- abun + rnorm(25, 1, 0.5)
+years <- c(1991:2015)
+plot(ab_ran~years, xlab = 'Year', ylab="Mean Counts (in million)")
+```
+
+A plot of the temperature and precipitation over 25 years: mean temperature and precipitation during the migration period vs. year.
+```{r}
+temp <- c(14.7, 14.6, 13.9, 14.5, 15.1, 14.8, 15.2, 15.3, 15.4, 15.2, 15.7, 15.6, 15.9, 16.3, 16.2, 16.4, 17.1, 17.0, 17.3, 17.5, 16.9, 17.8, 18.1, 17.7, 18.0) 
+pre <- c(0.4, 2.2, 2.8, 1.0, 2.4, 1.2, 0.8, 0.6, 4.4, 0.4, 4.6, 1.0, 3.4, 5.5, 6.7, 1.0, 6.2, 1.0, 8.5, 10.0, 6.3, 5.9, 10.2, 8.9, 10.2)
+year <- c(1991:2015)
+library(ggplot2)
+
+plot(pre~year, xlab = 'Year', ylab="Mean Temperature")
+plot(temp~year, xlab = 'Year', ylab="Mean Precipitation")
+```
+
+A plot of the peak dates vs. years.
+```{r}
+set.seed(44)
+peak <- c(26, 26, 25, 24, 23, 24, 25, 24, 25, 24, 23, 22, 23, 22, 21, 21, 23, 20, 20, 19, 18, 18, 17, 18, 17)
+years <- c(1991:2015)
+plot(peak~years, xlab = 'Year', ylab="Peak Date", ylim=c(15,30))
+```
