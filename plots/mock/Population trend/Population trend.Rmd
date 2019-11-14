@@ -1,0 +1,174 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+ws<-read.csv('rbss-predicted-actual-counts-1991-2015.csv', header=TRUE, sep=',')
+```
+
+```{r}
+ws1998<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==1998)
+ggplot(data=ws1998, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='1998', y='Daily Counts')
+
+
+ws1999<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==1999)
+ggplot(data=ws1999, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='1999', y='Daily Counts')
+
+
+ws2000<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2000)
+ggplot(data=ws2000, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2000', y='Daily Counts')
+
+
+ws2001<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2001)
+ggplot(data=ws2001, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2001', y='Daily Counts')
+
+
+ws2002<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2002)
+ggplot(data=ws2002, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2002', y='Daily Counts')
+
+
+ws2003<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2003)
+ggplot(data=ws2003, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2003', y='Daily Counts')
+
+
+ws2004<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2004)
+ggplot(data=ws2004, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2004', y='Daily Counts')
+
+
+ws2005<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2005)
+ggplot(data=ws2005, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2005', y='Daily Counts')
+
+
+ws2006<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2006)
+ggplot(data=ws2006, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2006', y='Daily Counts')
+
+
+ws2007<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2007)
+ggplot(data=ws2007, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2007', y='Daily Counts')
+
+
+ws2008<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2008)
+ggplot(data=ws2008, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2008', y='Daily Counts')
+
+
+ws2009<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2009)
+ggplot(data=ws2009, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2009', y='Daily Counts')
+
+
+ws2010<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2010)
+ggplot(data=ws2010, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2010', y='Daily Counts')
+
+
+ws2011<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2011)
+ggplot(data=ws2011, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2011', y='Daily Counts')
+
+
+ws2012<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2012)
+ggplot(data=ws2012, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2012', y='Daily Counts')
+
+
+ws2013<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2013)
+ggplot(data=ws2013, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2013', y='Daily Counts')
+
+
+ws2014<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2014)
+ggplot(data=ws2014, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2014', y='Daily Counts')
+
+
+ws2015<-ws%>%
+  select(Year, WESA, Date)%>%
+  filter(!is.na(Date) & !is.na(WESA) & Year==2015)
+ggplot(data=ws2015, aes(x=Date, y=WESA))+
+  geom_point()+
+  theme(axis.text.x = element_text(angle=30, hjust=1),panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+
+  labs(x='2015', y='Daily Counts')
+
+```
+
