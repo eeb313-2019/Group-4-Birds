@@ -10,9 +10,9 @@ Pseudo-figure captions:
 
 - Figure 3b. A scatter plot showing an overall increasing trend in the mean precipitation with fluctuations during Western Sandpiper's migration period over 25 years. The graph is generated from simulated data.
 
-- Figure 4. A scatter plot showing overall advanced peak dates over 25 years from simulated data. Y axis is the date in April.
+- Figure 4. A scatter plot showing overall advanced peak dates over 25 years from simulated data. The y axis represents the dates in April.
 
 
 
 
-  R code can be found in *Mock plot-copy.Rmd* and *Population trend.Rmd*
+  R code can be found in *Mock plot-copy.Rmd* and *Population trend.Rmd* files.
