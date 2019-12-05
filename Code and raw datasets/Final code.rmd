@@ -1,0 +1,337 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(tidyverse)
+# read Data
+bird_data<-read.csv('rbss-predicted-actual-counts-1991-2015.csv', header = TRUE, sep = ',')
+head(bird_data,10)
+```
+
+
+```{r}
+# Select Year, DATE(YYYY-MM-DD), and WESA (Western Sandpiper abundance) in the bird data
+# Filter out NAs
+bird_filtered <- bird_data%>%
+  select(Year, DATE, WESA)%>%
+  filter(!is.na(WESA))
+# Convert calendar date to julian date
+bird_Julian<-bird_filtered%>%
+  mutate(DATE=as.Date.character(DATE))%>%
+  mutate(Month=as.numeric(format(DATE, format = "%m")), # just in case we need 'day' and 'month'
+         Date=as.numeric(format(DATE, format = "%d")),
+         Julian=as.numeric(format(DATE, format='%j')))
+bird_Julian
+```
+
+```{r}
+# calculate weigthed mean migration julian date
+weighted<-bird_Julian%>%
+  group_by(Year)%>%
+  summarise(w.migration=weighted.mean(Julian, WESA, na.rm = TRUE))
+```
+
+```{r}
+# check for normality and outliers
+ggplot(weighted, aes(w.migration))+ 
+  geom_histogram()
+```
+
+
+
+```{r}
+#plot migration date vs. year
+ggplot(weighted, aes(Year, w.migration))+
+  geom_point(color='steelblue')+
+  geom_line(color='steelblue')+
+  geom_smooth(method=lm, se=FALSE, color='steelblue3')+
+  theme_bw()+
+  theme_classic()+
+  ylab('Weighted Means (Julian Migration Day)')+
+  xlab('Year')
+# plot shows a overall decreasing trend in migration date over the years
+```
+
+
+
+```{r}
+# linear regression: migration date vs. year
+summary(lm(data=weighted, w.migration~Year))
+# significant result (p=0.00133)
+```
+
+
+```{r}
+# round the weighted mean migration date
+R<-round(weighted$w.migration)
+R
+```
+
+```{r}
+# build a function called process_df_one_week which takes two arguments. A character argument: climate data file name, e.g. 'XXX.csv', and a numeric argument: the index of the climate data file. e.g 1 for 1991, 2 for 1992...
+# return a data frame including Year, Date ('YYYY-MM-DD'), julian date, daily max/min/Mean temperature and Total precipitation. The climatic data was measured one week prior to the (rounded) weighed mean migration date for the given year.
+library(data.table)
+process_df_one_week <- function(file_name,year){
+  # read data. The column names will be V1, V2, V3....
+  df<-fread(file_name, header = F, skip=1)
+  df0<-df%>%
+    # select Year(V6), Month(V7), Date(V8), max/min/mean temperatue(V10/V12/V14) and total precipitation(V24)
+    dplyr::select(V6,V7,V8, V10, V12, V14, V24)%>%
+    # create a new column 'Date0' (class: Date) which combines year-month-date
+    mutate(Date0=as.Date(paste(V6,V7,V8, sep="-"),"%Y-%m-%d"))%>%
+    # create a new column 'julian0', which converts calender date into julian date
+    mutate(julian0=as.numeric(format(Date0, format='%j')))%>%
+    # filter rows by julian date. Select climatic data that is one week prior to the (rounded) weighted mean migration date for the given year
+    filter(julian0>=R[year]-7 & julian0<=R[year])%>%
+    # rename columns
+    rename(Y=V6, Max_temp=V10, Min_temp=V12,Mean_temp=V14, Total_prec=V24)%>%
+    # select columns
+    dplyr::select(Y,Date0, julian0, Max_temp, Min_temp, Mean_temp, Total_prec)
+  return(df0)
+}
+```
+
+```{r}
+# generate 23 dataframes
+# no bird counts available in 1993 and 1996, i.e. no migration date available in 1993 & 1996
+# so the 3rd number in the list R is the migration date for 1994
+n1<-process_df_one_week('en_climate_daily_BC_1102425_1991_P1D.csv', 1)
+n2<-process_df_one_week('en_climate_daily_BC_1102425_1992_P1D.csv', 2)
+n4<-process_df_one_week('en_climate_daily_BC_1102425_1994_P1D.csv', 3)
+n5<-process_df_one_week('en_climate_daily_BC_1102425_1995_P1D.csv', 4)
+n7<-process_df_one_week('en_climate_daily_BC_1102425_1997_P1D.csv', 5)
+n8<-process_df_one_week('en_climate_daily_BC_1102425_1998_P1D.csv', 6)
+n9<-process_df_one_week('en_climate_daily_BC_1102425_1999_P1D.csv', 7)
+n10<-process_df_one_week('en_climate_daily_BC_1102425_2000_P1D.csv', 8)
+n11<-process_df_one_week('en_climate_daily_BC_1102425_2001_P1D.csv', 9)
+n12<-process_df_one_week('en_climate_daily_BC_1102425_2002_P1D.csv', 10)
+n13<-process_df_one_week('en_climate_daily_BC_1102425_2003_P1D.csv', 11)
+n14<-process_df_one_week('en_climate_daily_BC_1102425_2004_P1D.csv', 12)
+n15<-process_df_one_week('en_climate_daily_BC_1102425_2005_P1D.csv', 13)
+n16<-process_df_one_week('en_climate_daily_BC_1102425_2006_P1D.csv', 14)
+n17<-process_df_one_week('en_climate_daily_BC_1102425_2007_P1D.csv', 15)
+n18<-process_df_one_week('en_climate_daily_BC_1102425_2008_P1D.csv', 16)
+n19<-process_df_one_week('en_climate_daily_BC_1102425_2009_P1D.csv', 17)
+n20<-process_df_one_week('en_climate_daily_BC_1102425_2010_P1D.csv', 18)
+n21<-process_df_one_week('en_climate_daily_BC_1102425_2011_P1D.csv', 19)
+n22<-process_df_one_week('en_climate_daily_BC_1102425_2012_P1D.csv', 20)
+n23<-process_df_one_week('en_climate_daily_BC_1102425_2013_P1D.csv', 21)
+n24<-process_df_one_week('en_climate_daily_BC_1102425_2014_P1D.csv', 22)
+n25<-process_df_one_week('en_climate_daily_BC_1102425_2015_P1D.csv', 23)
+```
+
+
+```{r}
+#combine all the climate data dataframes by rows
+environ<-do.call("rbind", list(n1,n2,n4,n5,n7,n8,n9,n10,n11,n12,n13,n14,n15,n16,n17,
+                               n18,n19,n20,n21,n22,n23,n24,n25))
+environ
+```
+
+```{r}
+# check for normality and outliers
+ggplot(environ, aes(Max_temp))+   # normal distributed
+  geom_histogram()
+ggplot(environ, aes(Min_temp))+   # normal distributed
+  geom_histogram()
+ggplot(environ, aes(Mean_temp))+  # normal distributed
+  geom_histogram()
+ggplot(environ, aes(Total_prec))+ # heavily right skewed
+  geom_histogram()
+# It is impossible to transform the precipitation data to a normal distribution, as it has a large quantity of 0s. Therefore, I decide to replace all the non-zero values with 1, so I can treat the precipitation variable as a binary variable: Was there rainfall, with values 'yes' or 'no'.
+environ$Total_prec[environ$Total_prec>0] <- 1
+# calculate the average of each temperature variable, and the sum of precipitation (the number of rainy days during that week)
+environ_mean<-environ%>%
+  group_by(Y)%>%
+  summarise(meantemp=mean(Mean_temp,na.rm = TRUE),
+            maxtemp=mean(Max_temp, na.rm = TRUE),
+            mintemp=mean(Min_temp,na.rm = TRUE),
+            prec=sum(Total_prec,na.rm = TRUE))
+environ_mean
+```
+
+
+
+```{r}
+# combine the environmental data with the bird weighted mean migration data
+en_w<-cbind(weighted, environ_mean) 
+# there is no environmental data available in 2004, so it is filtered out
+en_w<-en_w%>%
+  dplyr::select(Year, w.migration, prec, mintemp, maxtemp, meantemp)%>%
+  filter(Year!=2004)
+ 
+en_w
+```
+
+```{r}
+# linear model and AICc
+library(MuMIn)
+library(PerformanceAnalytics)
+# check normality
+ chart.Correlation(en_w)
+# mean temp + precip
+mean_precip_int<-lm(data=en_w, w.migration~meantemp*prec)
+mean_precip<-lm(data=en_w, w.migration~meantemp+prec)
+mean_only<-lm(data=en_w, w.migration~meantemp)
+precip_only<-lm(data=en_w, w.migration~prec)
+ 
+# max temp + precip
+max_precip_int<-lm(data=en_w, w.migration~maxtemp*prec)
+max_precip<-lm(data=en_w, w.migration~maxtemp+prec)
+max_only<-lm(data=en_w, w.migration~maxtemp)
+# min temp + precip
+min_precip_int<-lm(data=en_w, w.migration~mintemp*prec)
+min_precip<-lm(data=en_w, w.migration~mintemp+prec)
+min_only<-lm(data=en_w, w.migration~mintemp)
+ 
+# Using AICc (the sample size is small, n/k is less than 40)
+AICc(mean_precip_int, mean_precip, mean_only, precip_only, max_precip_int, max_precip, max_only, min_precip_int, min_precip,min_only)
+# mean_only has the smallest AICc value
+summary(mean_only) # estimate=0.7255, p=0.0399
+```
+
+```{r}
+# plot meantemp vs. migration date
+ggplot(en_w, aes(meantemp, w.migration))+
+  geom_point(color='steelblue')+
+  geom_smooth(method=lm, se=FALSE, color='steelblue3')+
+  theme_bw()+
+  theme_classic()+
+  ylab('Weighted Means (Julian Migration Day)')+
+  xlab('Local daily mean temperature a week prior to weighted mean migration')
+```
+
+
+
+
+
+```{r}
+# explore the environmental data one week prior to migration
+en_w%>%
+  gather(Type, measurement, meantemp:prec, factor_key=TRUE)%>%
+  ggplot(aes(Year, measurement, col=Type))+
+  geom_point()+
+  geom_smooth(method=lm, se=FALSE)+  
+  theme_bw()+
+  theme_classic()+
+  ylab('Climatic measurement one week prior to migration')+
+  xlab('Year')
+# linear test
+summary(lm(data=en_w, mintemp~Year)) # estimate is -0.11830, p=0.00158
+summary(lm(data=en_w, maxtemp~Year)) # Not significant
+summary(lm(data=en_w, meantemp~Year)) # estimate is -0.09267, p=0.0250
+summary(lm(data=en_w, prec~Year)) # Not significant
+```
+
+
+
+
+```{r}
+# the migration date in 1991
+R[1]
+# build a function called process_df_reference which takes one argument. A character argument: climate data file name, e.g. 'XXX.csv'
+# return a data frame including Year, Date ('YYYY-MM-DD'), julian date, daily max/min/Mean temperature and Total precipitation. The climatic data was measured during julian date 117-124.
+library(data.table)
+process_df_reference <- function(file_name,year){
+  # read data. The column names will be V1, V2, V3....
+  df<-fread(file_name, header = F, skip=1)
+  df0<-df%>%
+    # select Year(V6), Month(V7), Date(V8), max/min/mean temperatue(V10/V12/V14) and total precipitation(V24)
+    dplyr::select(V6,V7,V8, V10, V12, V14, V24)%>%
+    # create a new column 'Date0' (class: Date) which combines year-month-date
+    mutate(Date0=as.Date(paste(V6,V7,V8, sep="-"),"%Y-%m-%d"))%>%
+    # create a new column 'julian0', which converts calender date into julian date
+    mutate(julian0=as.numeric(format(Date0, format='%j')))%>%
+    # filter rows by julian date. Select climatic data during 117-124
+    filter(julian0>=117 & julian0<=124)%>%
+    # rename columns
+    rename(Y=V6, Max_temp=V10, Min_temp=V12,Mean_temp=V14, Total_prec=V24)%>%
+    # select columns
+    dplyr::select(Y,Date0, julian0, Max_temp, Min_temp, Mean_temp, Total_prec)
+  return(df0)
+}
+```
+
+```{r}
+# generate 25 dataframes
+t1<-process_df_reference('en_climate_daily_BC_1102425_1991_P1D.csv')
+t2<-process_df_reference('en_climate_daily_BC_1102425_1992_P1D.csv')
+t3<-process_df_reference('en_climate_daily_BC_1102425_1993_P1D.csv')
+t4<-process_df_reference('en_climate_daily_BC_1102425_1994_P1D.csv')
+t5<-process_df_reference('en_climate_daily_BC_1102425_1995_P1D.csv')
+t6<-process_df_reference('en_climate_daily_BC_1102425_1996_P1D.csv')
+t7<-process_df_reference('en_climate_daily_BC_1102425_1997_P1D.csv')
+t8<-process_df_reference('en_climate_daily_BC_1102425_1998_P1D.csv')
+t9<-process_df_reference('en_climate_daily_BC_1102425_1999_P1D.csv')
+t10<-process_df_reference('en_climate_daily_BC_1102425_2000_P1D.csv')
+t11<-process_df_reference('en_climate_daily_BC_1102425_2001_P1D.csv')
+t12<-process_df_reference('en_climate_daily_BC_1102425_2002_P1D.csv')
+t13<-process_df_reference('en_climate_daily_BC_1102425_2003_P1D.csv')
+t14<-process_df_reference('en_climate_daily_BC_1102425_2004_P1D.csv')
+t15<-process_df_reference('en_climate_daily_BC_1102425_2005_P1D.csv')
+t16<-process_df_reference('en_climate_daily_BC_1102425_2006_P1D.csv')
+t17<-process_df_reference('en_climate_daily_BC_1102425_2007_P1D.csv')
+t18<-process_df_reference('en_climate_daily_BC_1102425_2008_P1D.csv')
+t19<-process_df_reference('en_climate_daily_BC_1102425_2009_P1D.csv')
+t20<-process_df_reference('en_climate_daily_BC_1102425_2010_P1D.csv')
+t21<-process_df_reference('en_climate_daily_BC_1102425_2011_P1D.csv')
+t22<-process_df_reference('en_climate_daily_BC_1102425_2012_P1D.csv')
+t23<-process_df_reference('en_climate_daily_BC_1102425_2013_P1D.csv')
+t24<-process_df_reference('en_climate_daily_BC_1102425_2014_P1D.csv')
+t25<-process_df_reference('en_climate_daily_BC_1102425_2015_P1D.csv')
+```
+
+
+```{r}
+#combine all the climate data dataframes by rows
+reference<-do.call("rbind", list(t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,
+                               t18,t19,t20,t21,t22,t23,t24,t25))
+reference
+```
+
+```{r}
+# check for normality and outliers
+ggplot(reference, aes(Max_temp))+   # normal distributed
+  geom_histogram()
+ggplot(reference, aes(Min_temp))+   # normal distributed
+  geom_histogram()
+ggplot(reference, aes(Mean_temp))+  # normal distributed
+  geom_histogram()
+ggplot(reference, aes(Total_prec))+ # heavily right skewed
+  geom_histogram()
+# Again, the precipitation variable is converted to a binary variable: "WasThereRainfall", with values 'yes' or 'no'.
+reference$Total_prec[reference$Total_prec>0] <- 1
+# calculate the average of each temperature variable, and the sum of precipitation (the number of rainy days during that week)
+reference_mean<-reference%>%
+  group_by(Y)%>%
+  summarise(meantemp=mean(Mean_temp,na.rm = TRUE),
+            maxtemp=mean(Max_temp, na.rm = TRUE),
+            mintemp=mean(Min_temp,na.rm = TRUE),
+            prec=sum(Total_prec,na.rm = TRUE))
+reference_mean
+```
+
+
+```{r}
+# check normality
+ chart.Correlation(reference_mean)
+```
+
+```{r}
+# plot the environmental data during 117-124
+reference_mean%>%
+  gather(Type, measurement, meantemp:prec, factor_key=TRUE)%>%
+  ggplot(aes(Y, measurement, col=Type))+
+  geom_point()+
+  geom_smooth(method=lm, se=FALSE)+  
+  theme_bw()+
+  theme_classic()+
+  ylab('Climatic measurement during 117-124th day')+
+  xlab('Year')
+# linear test (117-124)
+summary(lm(data=reference_mean, mintemp~Y)) # Not significant
+summary(lm(data=reference_mean, maxtemp~Y)) # Not significant
+summary(lm(data=reference_mean, meantemp~Y)) # Not significant
+summary(lm(data=reference_mean, prec~Y)) # Not significant
+```
