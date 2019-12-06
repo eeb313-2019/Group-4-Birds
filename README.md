@@ -35,5 +35,5 @@
   
 # Repo Content
 
-Folders called Doc and Plot/Mock contained our origincal hypotheses, predictions and possible figures, but we did not focus on all the questions in our final project. 
-Please find our final report on the first page. The code and raw datasets can be found in the foler 'Code and raw datasets'.
+Folders called Doc and Plot/Mock contained our original hypotheses, predictions and possible figures, but we did not focus on all the questions in our final project. 
+Please find our final report on the first page. The code and raw datasets can be found in the folder 'Code and raw datasets'.
