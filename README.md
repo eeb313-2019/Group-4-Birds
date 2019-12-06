@@ -3,7 +3,7 @@
 
 # Introduction to the project
 
-  Owing to the evident global climate change, some migratory birds are experiencing a rapid decline in their abundances. Besides, a change in local climatic conditions (such as temperature and precipitation) may predict a shift in migration dates. Studies on effects of climate change on Ontario migratory birds have been done and well analyzed, and we are wondering if Western Sandpiper, a migratory species which passes through coastal British Columbia as a stopover site, shows similar trends. We are to plot out the abundance data of Western Sandpiper against the stopover sites' local temperature and precipitation and compare the difference in peaks in migration dates on an 24-year interval to figure out if climate change is a potential threat. Thus, we can give insights for future conservation efforts of this species. We want to do this analysis because all of our group members are specifically interested in bird diversity and conservation, and would like to better understand the current anthropogenic environmental crisis.
+  There is evidence that orangnisms altered their behavior, morphology and physiology as a response to climate change. For migratory birds, changes in local climatic conditions (such as temperature and precipitation) may predict a shift in their migration dates. Studies on effects of climate change on Ontario migratory birds have been done and well analyzed, and we are wondering if Western Sandpiper (*Calidris mauri*), a long-term migratory species which passes through coastal British Columbia as a stopover site, shows similar trends. We are to plot out the migration timing when most of the birds have arrived against the stopover sites' local temperature and precipitation from 1991-2015 and see whether the local climate predicts the migration timing. We want to do this analysis because all of our group members are specifically interested in bird diversity and conservation, and would like to better understand the current anthropogenic environmental crisis.
   
 
 # Description of the data
@@ -12,7 +12,7 @@
   
   We also selected datasets for daily temperature and precipitation in Delta Tsawwassen Beach, BC for years from 1991-2015. These historical climate datasets were obtained from the Daily Data Report produced by Department of Environment and Natural Resources, Government of Canada. Specialized scientists recorded the hourly climatological data at observing stations, using instruments such as satellites and weather balloons and others. The Delta Tsawwassen Beach was the closest site to the given coordinates where the actual bird abundance survey was conducted, and this site contained sufficient climate data (i.e. having data for the targeted time intervals).  
   
-  Our response variable will be the daily abundance of Western Sandpiper in costal BC from April to May, 1991-2015 and our predictor variables may include daily temperature and precipitation from April to May 1991-2015. By exploring the relationship between these variables, we can gain some insights about the impacts of climate change on *potential change* in the Western Sandpiper abundance and *potential shifts* of their migration dates.
+  Our response variable will be the migration timing indicated by the daily counts of Western Sandpiper in costal BC from April to May, 1991-2015 and our predictor variables may include daily temperature and precipitation from April to May 1991-2015. By exploring the relationship between these variables, we can gain some insights about the impacts of climate change on *potential shifts* of their migration dates.
 
 - Reference:
 
@@ -20,7 +20,7 @@
   
   Government of Canada. (2019) Data from: Daily climate report (https://climate.weather.gc.ca/climate_data/daily_data_e.html?hlyRange=%7C&dlyRange=1971-03-01%7C2019-11-10&mlyRange=1971-01-01%7C2007-02-01&StationID=766&Prov=BC&urlExtension=_e.html&searchType=stnProx&optLimit=yearRange&StartYear=1998&EndYear=2015&selRowPerPage=100&Line=1&txtRadius=25&optProxType=custom&selCity=&selPark=&txtCentralLatDeg=49&txtCentralLatMin=03&txtCentralLatSec=0&txtCentralLongDeg=123&txtCentralLongMin=09&txtCentralLongSec=0&timeframe=2&Day=11&Year=1999&Month=4#)
   
-  Note: we only list one climate dataset above, while we actually have 24, with one for each year.
+  Note: we only list one climate dataset above, while we actually have 25, with one for each year.
 
   
 # Team description
@@ -32,3 +32,8 @@
   Xinji Zhao: a fourth-year undergraduate student majoring in biodiversity & conservation biology, minoring in statistics. I'm able to analyze the data and graph based on my statistic knowledge, prefer jobs after coding.
   
   We will have Xueqian Ma to be our leader for the first two weeks to help us get a fresh start and brainstorm with relevant ideas. Yani Fang will be our team leader for the third week, monitoring the process of data analysis. Xinji Zhao will be our team leader for the final week, whose responsibility is mainly on the organization of our results and preparation of the PPT presentation. We prefer that Yani will be our Recorder and Xinji as our Organiser, for now, later changes can be applied if that is better.
+  
+# Repo Content
+
+Folders called Doc and Plot/Mock contained our original hypotheses, predictions and possible figures, but we did not focus on all the questions in our final project. 
+Please find our final report on the first page. The code and raw datasets can be found in the folder 'Code and raw datasets'.
