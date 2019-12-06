@@ -32,3 +32,8 @@
   Xinji Zhao: a fourth-year undergraduate student majoring in biodiversity & conservation biology, minoring in statistics. I'm able to analyze the data and graph based on my statistic knowledge, prefer jobs after coding.
   
   We will have Xueqian Ma to be our leader for the first two weeks to help us get a fresh start and brainstorm with relevant ideas. Yani Fang will be our team leader for the third week, monitoring the process of data analysis. Xinji Zhao will be our team leader for the final week, whose responsibility is mainly on the organization of our results and preparation of the PPT presentation. We prefer that Yani will be our Recorder and Xinji as our Organiser, for now, later changes can be applied if that is better.
+  
+# Repo Content
+
+Folders called Doc and Plot/Mock contained our origincal hypotheses, predictions and possible figures, but we did not focus on all the questions in our final project. 
+Please find our final report on the first page. The code and raw datasets can be found in the foler 'Code and raw datasets'.
